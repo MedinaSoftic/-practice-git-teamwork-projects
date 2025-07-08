@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -13,6 +14,15 @@ target/
 *.ipr
 
 ### Eclipse ###
+=======
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+>>>>>>> dfb9382 (inital commit)
 .apt_generated
 .classpath
 .factorypath
@@ -21,6 +31,15 @@ target/
 .springBeans
 .sts4-cache
 
+<<<<<<< HEAD
+=======
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+>>>>>>> dfb9382 (inital commit)
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -33,8 +52,11 @@ build/
 
 ### VS Code ###
 .vscode/
+<<<<<<< HEAD
 
 ### Mac OS ###
 .DS_Store
 
 .env
+=======
+>>>>>>> dfb9382 (inital commit)
