@@ -25,9 +25,11 @@ public class MovieController {
                     <h1>Add a movie: </h1>
                 
                     <form action="/add" method="post">
+                    
                     Title: <input type='text' name='title' /><br/>
                     Rating: <input type='text' name='rating' /><br/>
-                
+                    Review: <textarea name='review'></textarea><br/>
+                    
                     <input type='submit' value='Submit' />
                     </form>
                 </body>
@@ -35,10 +37,10 @@ public class MovieController {
                 """;
     }
     @PostMapping("/add")
-    public String addMovie(@RequestParam String title, @RequestParam int rating) {
+    public String addMovie(@RequestParam String title, @RequestParam int rating, @RequestParam String review) {
         String description = geminiApp.generateDescription(title);
 
-        Movie movie = new Movie(title, rating, description);
+        Movie movie = new Movie(title, rating, description, review);
         movies.add(movie);
 
         StringBuilder html = new StringBuilder();
