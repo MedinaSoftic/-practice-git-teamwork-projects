@@ -29,7 +29,7 @@ public class TeacherService {
         return teacherRepository.findById(id)
                 .map(teacher -> {
                     teacher.setName(updatedTeacher.getName());
-                    teacher.setSubject(updatedTeacher.getSubject());
+                    teacher.setAge(updatedTeacher.getAge());
                     return teacherRepository.save(teacher);
                 })
                 .orElse(null);
