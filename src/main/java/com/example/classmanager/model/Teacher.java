@@ -1,28 +1,14 @@
 package com.example.classmanager.model;
 
-import jakarta.persistence.Id;
-
 public class Teacher {
-    @Id
-    private Long id;
     private String name;
-    private String subject;
+    private int age;
+    private String employeeId;
 
-    public Teacher() {
-    }
-
-    public Teacher(Long id, String name, String subject) {
-        this.id = id;
+    public Teacher(String name, int age, String employeeId) {
         this.name = name;
-        this.subject = subject;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+        this.age = age;
+        this.employeeId = employeeId;
     }
 
     public String getName() {
@@ -33,11 +19,19 @@ public class Teacher {
         this.name = name;
     }
 
-    public String getSubject() {
-        return subject;
+    public int getAge() {
+        return age;
     }
 
-    public void setSubject(String subject) {
-        this.subject = subject;
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
     }
 }
