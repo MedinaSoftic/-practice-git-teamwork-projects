@@ -1,16 +1,36 @@
 package com.example.classmanager.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Student {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long studentId;
+
     private String name;
     private int age;
-    private String studentId;
 
-    public Student(String name, int age, String studentId) {
-        this.name = name;
-        this.age = age;
-        this.studentId = studentId;
+    public Student() {
     }
 
+    public Student(String name, int age){
+        this.name = name;
+        this.age = age;
+//        this.studentId = studentId;
+    }
+
+    public Long getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(Long studentId) {
+        this.studentId = studentId;
+    }
     public String getName() {
         return name;
     }
@@ -27,11 +47,4 @@ public class Student {
         this.age = age;
     }
 
-    public String getStudentId() {
-        return studentId;
-    }
-
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
-    }
 }
